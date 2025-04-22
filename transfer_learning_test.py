@@ -4,12 +4,17 @@ from resnet50 import ResNet50
 from keras.preprocessing import image
 from keras.applications.imagenet_utils import preprocess_input
 from imagenet_utils import decode_predictions
+import tensorflow as tf
+import os
 
-model = VGG16(include_top=True, weights='imagenet')
-# model.save('model.h5')
-# model.save('model.keras')
+model_path = 'model.keras'
+if os.path.exists(model_path):
+    model = tf.keras.models.load_model(model_path)
+else:
+    model = VGG16(include_top=True, weights='imagenet')
+    # model.save('model.keras')
 
-# tf.keras.models.load_model('model.keras')
+
 print("saved")
 
 img_path = r'data\data\cats\cat.1.jpg'
