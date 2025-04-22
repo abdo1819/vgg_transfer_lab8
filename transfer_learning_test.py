@@ -6,6 +6,11 @@ from keras.applications.imagenet_utils import preprocess_input
 from imagenet_utils import decode_predictions
 
 model = VGG16(include_top=True, weights='imagenet')
+# model.save('model.h5')
+# model.save('model.keras')
+
+# tf.keras.models.load_model('model.keras')
+print("saved")
 
 img_path = r'data\data\cats\cat.1.jpg'
 img = image.load_img(img_path, target_size=(224, 224))
