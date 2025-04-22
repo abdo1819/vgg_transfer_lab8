@@ -7,7 +7,7 @@ from imagenet_utils import decode_predictions
 
 model = VGG16(include_top=True, weights='imagenet')
 
-img_path = 'elephant.jpg'
+img_path = r'data\data\cats\cat.1.jpg'
 img = image.load_img(img_path, target_size=(224, 224))
 x = image.img_to_array(img)
 x = np.expand_dims(x, axis=0)
