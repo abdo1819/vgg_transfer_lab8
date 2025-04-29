@@ -30,6 +30,7 @@ from tensorflow.keras.utils import get_source_inputs
 
 
 WEIGHTS_PATH = 'https://github.com/fchollet/deep-learning-models/releases/download/v0.1/vgg16_weights_tf_dim_ordering_tf_kernels.h5'
+# WEIGHTS_PATH = 'file://C:\work\univ\image_processing_2024_2\old_materials\image_processing\All_labs_2020\Lab8\try_2025\vgg_transfer_lab8\vgg16_weights_tf_dim_ordering_tf_kernels.h5'
 WEIGHTS_PATH_NO_TOP = 'https://github.com/fchollet/deep-learning-models/releases/download/v0.1/vgg16_weights_tf_dim_ordering_tf_kernels_notop.h5'
 
 
@@ -163,6 +164,7 @@ def VGG16(include_top=True, weights='imagenet',
             weights_path = get_file('vgg16_weights_tf_dim_ordering_tf_kernels.h5',
                                     WEIGHTS_PATH,
                                     cache_subdir='models')
+            # weights_path = 'vgg16_weights_tf_dim_ordering_tf_kernels.h5'
         else:
             weights_path = get_file('vgg16_weights_tf_dim_ordering_tf_kernels_notop.h5',
                                     WEIGHTS_PATH_NO_TOP,
